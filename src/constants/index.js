@@ -1,9 +1,10 @@
 export const navLinks = [
   { id: "about", title: "About" },
   { id: "skills", title: "Skills" },
-  { id: "projects", title: "Projects" },
-  { id: "contact", title: "Contact" },
   { id: "experience", title: "Experience" },
+  { id: "projects", title: "Projects" },
+  { id: "certificates", title: "Certificates" },
+  { id: "contact", title: "Contact" },
 ];
 
 export const skills = [
@@ -61,6 +62,15 @@ export const projects = [
     liveUrl:
       "https://script.google.com/macros/s/AKfycbzvxF0Xl_SyvUZTnEGTUACczE6jFy-qgGDRI6-SFh9fmCwPTuMb9opxAHHaPzCiLwp_/exec",
     color: "#10b981",
+  },
+  {
+    id: 4,
+    title: "School Website – The Base School",
+    description:
+      "Developed the UI for a kindergarten school website based in Haldwani. The website includes school information, admission details, fee structure, and a responsive modern design for parents and students.",
+    tech: ["HTML", "CSS", "JavaScript", "PHP"],
+    liveUrl: "https://thebaseschool.org/",
+    color: "#f97316",
   },
 ];
 
