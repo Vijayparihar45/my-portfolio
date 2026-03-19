@@ -77,8 +77,8 @@ const GalaxyBackground = () => {
     const drawNebulas = () => {
       nebulas.forEach((n) => {
         const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r);
-        grad.addColorStop(0, `rgba(${n.color},0.04)`);
-        grad.addColorStop(0.5, `rgba(${n.color},0.02)`);
+        grad.addColorStop(0, `rgba(${n.color},0.10)`);
+        grad.addColorStop(0.5, `rgba(${n.color},0.05)`);
         grad.addColorStop(1, `rgba(${n.color},0)`);
         ctx.fillStyle = grad;
         ctx.beginPath();
@@ -167,11 +167,11 @@ const GalaxyBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Deep space background
+      // Deep space background — lighter
       const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
-      bgGrad.addColorStop(0, "#050510");
-      bgGrad.addColorStop(0.5, "#0a0a14");
-      bgGrad.addColorStop(1, "#080818");
+      bgGrad.addColorStop(0, "#0d0d1f");
+      bgGrad.addColorStop(0.5, "#0a0a1a");
+      bgGrad.addColorStop(1, "#0f0f22");
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, width, height);
 
