@@ -228,7 +228,7 @@ const Footer = () => {
                 borderRadius:"20px", fontSize:"12px", color:"#ff9933",
                 fontFamily:"'Space Grotesk',sans-serif", fontWeight:600,
               }}>
-                🇮🇳 Made in India
+              
               </div>
             </div>
           </div>
