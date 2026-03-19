@@ -9,13 +9,13 @@ import Certificate from "./sections/Certificate";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
-import GalaxyBackground from "./components/GalaxyBackground";
+
 
 
 function App() {
   return (
     <main className="bg-black text-white"> 
-     <GalaxyBackground />
+    
       <Navbar />
       <Hero />
       <About />
