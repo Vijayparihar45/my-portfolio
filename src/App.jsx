@@ -10,8 +10,6 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
-
-
 function App() {
   return (
     <main className="bg-black text-white"> 
