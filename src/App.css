@@ -1,114 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --purple: #a855f7;
-  --cyan: #06b6d4;
-  --pink: #ec4899;
-  --green: #10b981;
-  --bg: #0a0a14;
-  --card: rgba(255,255,255,0.03);
-  --border: rgba(255,255,255,0.08);
-  --text: #94a3b8;
-  --heading: #f1f5f9;
+  --purple: #a855f7; --cyan: #06b6d4; --pink: #ec4899;
+  --green: #10b981; --bg: #0a0a14;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--bg);
-  color: var(--text);
+  color: #94a3b8;
   font-family: 'DM Sans', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--purple), var(--cyan));
   border-radius: 3px;
 }
 
-/* Selection */
-::selection {
-  background: rgba(168,85,247,0.3);
-  color: #fff;
-}
+::selection { background: rgba(168,85,247,0.3); color: #fff; }
+.app { min-height: 100vh; }
+input:focus, textarea:focus { outline: none !important; }
 
-.app {
-  min-height: 100vh;
-}
+/* ---- MOBILE RESPONSIVE ---- */
+@media (max-width: 768px) {
 
-/* ===== RESPONSIVE ===== */
-
-/* Tablet */
-@media (max-width: 900px) {
-  section {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-
-  nav {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-  }
-
-  .nav-links {
-    display: none !important;
-  }
-
-  .hamburger {
-    display: flex !important;
-  }
-
-  .hero-text {
-    flex: 1 1 100% !important;
-    text-align: center;
-  }
-
-  .hero-photo {
-    flex: 1 1 100% !important;
-    order: -1;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
+  /* All sections padding fix */
   section {
     padding-left: 20px !important;
     padding-right: 20px !important;
-    padding-top: 70px !important;
-    padding-bottom: 70px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
-  .hero-photo div div {
-    width: 220px !important;
-    height: 220px !important;
+  /* Hero fix */
+  #hero > div > div {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 30px !important;
   }
-}
+  .hero-text {
+    flex: 1 1 100% !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .hero-photo { flex: 0 0 auto !important; }
 
-/* Glow effect for focused inputs */
-input:focus, textarea:focus {
-  outline: none !important;
+  /* About fix */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Contact fix */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* All grids single column */
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards no overflow */
+  div[style*="border-radius: 20px"],
+  div[style*="border-radius: 22px"],
+  div[style*="border-radius: 24px"] {
+    overflow: hidden !important;
+    word-break: break-word !important;
+  }
+
+  /* Buttons wrap */
+  div[style*="display: flex"][style*="gap: 16px"],
+  div[style*="display: flex"][style*="gap: 14px"],
+  div[style*="display: flex"][style*="gap: 12px"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Footer fix */
+  footer { padding: 32px 20px 20px !important; }
+  footer > div > div:first-child {
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+  footer > div > div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  /* WhatsApp button */
+  a[href*="wa.me"] {
+    bottom: 16px !important;
+    left: 16px !important;
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+  }
+
+  /* Scroll to top */
+  button[style*="position: fixed"] {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
 }
